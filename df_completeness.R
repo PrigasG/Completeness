@@ -1,3 +1,5 @@
+library(scales)
+
 df_completeness <- function(df_comp){
   
   #This count the empty rows in each column and stores as a data frame
