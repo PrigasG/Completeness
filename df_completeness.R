@@ -2,6 +2,9 @@ library(scales)
 
 df_completeness <- function(df_comp){
   
+  #if there are characters that need to be replaced with NA to identify them as empty
+  #df_comp[df_comp == "NULL"] <- NA #this assign NULL in our data as NA. 
+  
   #This count the empty rows in each column and stores as a data frame
   df_cness <- as.data.frame(apply(is.na(df_comp), 2, sum))
   
